@@ -1,6 +1,6 @@
 import pandas as pd
 
-ATTRIBUTE_WEIGHT = 25
+ATTRIBUTE_WEIGHT = 20
 MOVING_AVERAGE_VALUE = 100
 
 def return_moving_average_score():
@@ -8,7 +8,7 @@ def return_moving_average_score():
     
     ibov['MA'] = ibov['Close'].rolling(MOVING_AVERAGE_VALUE).mean()
 
-    list_of_moving_averages = ibov.tail(MOVING_AVERAGE_VALUE)["MA"].to_list()
+    list_of_moving_averages = ibov.tail(MOVING_AVERAGE_VALUE)["Close"].to_list()
 
     today_value = list_of_moving_averages.pop()
 

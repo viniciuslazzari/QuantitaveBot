@@ -1,6 +1,6 @@
 import requests
 
-ATTRIBUTE_WEIGHT = 25
+ATTRIBUTE_WEIGHT = 20
 
 URL = 'https://opcoes.net.br/historico/liquidez/json'
 PARAMS = dict(
